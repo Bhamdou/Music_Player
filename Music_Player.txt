@@ -1,0 +1,24 @@
+The code is designed to function as a music player application with a basic graphical user interface (GUI).
+
+This music player supports operations like playing music, pausing and resuming music, stopping music,
+and adjusting the volume.
+
+The GUI is created using tkinter, a standard Python interface to the Tk GUI toolkit.
+
+Music playback is handled by the pygame library, which has the mixer module for sound processing.
+
+The mutagen library is used to handle metadata of the music files, like artist and album info and song length.
+
+The user interface includes a list box to display the playlist, buttons to control playback and volume,
+a progress bar to show the song's progress, and a metadata label to display song details.
+
+You can add songs to the playlist using the "Add Song(s)" button which opens a file dialog to select .mp3 files.
+
+The volume is adjustable with a slider that changes the volume of the pygame mixer.
+
+The progress bar updates every second using the update_progress() function.
+It first gets the length of the currently playing song using mutagen, then runs a for loop for that many seconds,
+each time updating the progress bar.
+
+The metadata label gets updated every time a new song is played using the update_metadata() function.
+It reads the metadata of the currently playing song using mutagen and sets the metadata label to display this info.
